@@ -1,0 +1,37 @@
+<template>
+    <div>
+        <img src="http://www.afalchi.it/media/img/lens.png" alt="" class="plus">
+        <div class="img normal" style="background-image:url( imgNornal )"></div>
+        <div class="img zoom" style="background-image:url(imgZoom)"></div>
+    </div>
+</template>
+<script>
+export default {
+  props: ['imgNornal', 'imgZoom'],
+  data () {
+    return {
+      msg: 'Hello this is <demo-1>'
+    }
+  },
+  methods: {
+    moveBG: function (ev) {     
+      
+      var container = this.$el,
+          imgZoom = container.childNodes[4]; // MEMO: Yes, I can select this better
+      
+      
+      var e = {
+        w: imgZoom.offsetWidth,
+        h: imgZoom.offsetHeight
+      };     
+
+      var c = {
+        x: Math.round((ev.clientX - (container.offsetLeft - window.scrollX)) / (e.w / 100)),
+        y: Math.round((ev.clientY - (container.offsetTop - window.scrollY)) / (e.h / 100))
+      };
+      
+      imgZoom.style.backgroundPosition = c.x + '% ' + c.y + '%';
+    }
+  }
+}
+</script>
