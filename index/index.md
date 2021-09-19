@@ -34,6 +34,7 @@ Lorum Ipsum asdf asdf asdf asf asfd, Lorum Ipsum asdf asdf asdf asf asfd
 Lorum Ipsum asdf asdf asdf asf asfd, Lorum Ipsum asdf asdf asdf asf asfd, Lorum Ipsum asdf asdf asdf asf asfd
 
 ## Customizing the Checkout Process
+Lorum Ipsum asdf asdf asdf asf asfd
 
 ## Sales Operations
 
